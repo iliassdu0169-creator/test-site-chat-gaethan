@@ -1,0 +1,14 @@
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+app.post("/chat", (req, res) => {
+  res.json({ reply: "Bonjour 👋 je fonctionne !" });
+});
+
+app.listen(3000, () => {
+  console.log("Serveur lancé sur http://localhost:3000");
+});
