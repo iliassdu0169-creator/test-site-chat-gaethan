@@ -20,7 +20,7 @@ async function send() {
 
   chat.innerHTML += "<p><b>Moi :</b> " + input.value + "</p>";
 
-  const res = await fetch("http://localhost:3000/chat", {
+  const res = await fetch("https://chat-simple.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: input.value })
